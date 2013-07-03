@@ -6,10 +6,10 @@ gem 'pg'
 
 gem 'activesupport'
 gem 'activerecord'
-
 gem 'rake'
 
 
 group :development, :test do
+  gem 'wirble'
   gem 'faker'
 end
