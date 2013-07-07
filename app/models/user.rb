@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   def proficiency_for skill_to_find
     x = self.skillsets.find_by_skill_id(skill_to_find.id)
-    x
+    x.proficiency
   end
 
   def set_proficiency_for skill_to_find, value

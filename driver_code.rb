@@ -23,7 +23,7 @@ zee = User.create({:name => "Zee", :email => "zee@example.com"})
 beard_growing = Skill.create({:name => "Beard Growing", :context => "personal"})
 
 
-### This confirms you may add a skill to a user 
+### This confirms you may add a skill to a user
 zee.skills << beard_growing
 assert(Skill.find_by_name("Beard Growing").users.include?(zee), "Zee has the beard growing skill!")
 
@@ -42,7 +42,7 @@ beard_growing2 = Skill.create({:name => "Beard Growing", :context => "personal"}
 assert(!beard_growing2.persisted?, "Second Beard Growing Skill is not saved")
 
 ### This confirms that a person starts with a proficiency of 0 for a skill
-assert(jesse.proficiency_for(beard_growing) == 0, " Jesse cannot grow a beard :(")
+assert(jesse.proficiency_for(beard_growing) == 0, "Jesse cannot grow a beard :(")
 
 ### This confirms that a person can be given a proficiency for a skill
 zee.set_proficiency_for(beard_growing, 900)
